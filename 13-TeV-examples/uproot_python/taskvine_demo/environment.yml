@@ -1,0 +1,16 @@
+name: hyy-taskvine-demo
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - pip
+  - ndcctools=7.7.0
+  - pip:
+      - aiohttp==3.14.3
+      - atlasopenmagic==1.9.1
+      - awkward==2.11.0
+      - fsspec==2026.6.0
+      - numpy==2.4.6
+      - uproot==5.7.5
+      - vector==1.8.1
