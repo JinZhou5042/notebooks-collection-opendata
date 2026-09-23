@@ -2,6 +2,14 @@
 
 This runs the ATLAS Open Data H→γγ analysis with TaskVine. The analysis is adapted from [`HyyAnalysis.ipynb`](../HyyAnalysis.ipynb), and the download uses the same `atlasopenmagic`/`fsspec` cache setup as the notebook.
 
+## ODF JupyterHub notebook
+
+The [self-contained ODF notebook](odf_jupyterhub/hyy-taskvine-demo.ipynb) runs this analysis from the ODF JupyterHub with `taskvine-gateway` worker pods. Upload it to [ODF JupyterHub](https://jupyterhub.odf.uchicago.edu/), run Part 0 to install and select the `Python (taskvine-atlas)` kernel, then continue in order. In Part 2, run `!ls /data` and replace `REPLACE_ME` with your own shared-data directory name before downloading the 16 ROOT files. Run the final cleanup cell when finished.
+
+A run on ODF on 2026-09-23 completed 16 tasks with 36,564,144 entries and 553,458 selected events in 54.3 seconds. These are observations from that run; rerun the notebook to obtain results for your environment.
+
+The command-line demo below is for a separately started TaskVine worker on a cluster.
+
 The demo has three main components:
 
 - `download_data.py` discovers the 16 public CERN ROOT files with `atlasopenmagic` and downloads them through `fsspec.simplecache`.
